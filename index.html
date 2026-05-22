@@ -21,10 +21,55 @@
       font-family: Arial, sans-serif;
     }
 
-    .logo {
-      width: 250px;
-      height: 250px;
+    .logo-container {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #C9A84C;
+      box-shadow: 
+        0 0 20px #C9A84C,
+        0 0 40px #C9A84C,
+        0 0 80px rgba(201, 168, 76, 0.6),
+        0 0 120px rgba(201, 168, 76, 0.3);
       margin-bottom: 30px;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* Pulsing glow animation */
+      animation: pulse-glow 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        box-shadow: 
+          0 0 20px #C9A84C,
+          0 0 40px #C9A84C,
+          0 0 80px rgba(201, 168, 76, 0.6),
+          0 0 120px rgba(201, 168, 76, 0.3);
+      }
+      50% {
+        box-shadow: 
+          0 0 30px #C9A84C,
+          0 0 60px #C9A84C,
+          0 0 100px rgba(201, 168, 76, 0.8),
+          0 0 160px rgba(201, 168, 76, 0.5);
+      }
+      100% {
+        box-shadow: 
+          0 0 20px #C9A84C,
+          0 0 40px #C9A84C,
+          0 0 80px rgba(201, 168, 76, 0.6),
+          0 0 120px rgba(201, 168, 76, 0.3);
+      }
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     h1 {
@@ -33,6 +78,12 @@
       font-weight: bold;
       letter-spacing: 8px;
       text-transform: uppercase;
+
+      /* Gold text glow */
+      text-shadow:
+        0 0 10px #C9A84C,
+        0 0 20px #C9A84C,
+        0 0 40px rgba(201, 168, 76, 0.5);
     }
 
     nav {
@@ -40,7 +91,7 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: #C9A84C;
       text-decoration: none;
       font-size: 18px;
       margin: 0 20px;
@@ -50,14 +101,16 @@
     }
 
     nav a:hover {
-      border-bottom: 2px solid #ffffff;
+      border-bottom: 2px solid #C9A84C;
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Replace with your actual logo file name -->
-  <img class="logo" src="Panthers_logo.png" alt="Panthers Logo">
+  <div class="logo-container">
+    <img class="logo" src="Panthers_Logo.png" alt="Panthers Logo">
+  </div>
 
   <h1>Panthers</h1>
 
